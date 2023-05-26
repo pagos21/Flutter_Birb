@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a2e5f06fc32bb49ba4459ef85a812c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 10
   deadZone: -45
 --- !u!1 &944356352601952331
 GameObject:
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 769171038008466662}
   - component: {fileID: 3488293623838627357}
   - component: {fileID: 8492186156653544764}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

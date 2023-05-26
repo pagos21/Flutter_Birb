@@ -12,6 +12,7 @@ public class LogicScript : MonoBehaviour
     public GameObject gameOverScreen;
     public UnityMessageManager mess;
     public bool isGameOver = false;
+    private bool isMessSent = false;
 
     [ContextMenu("Increase score")]
     public void addScore(int score2Add)
@@ -23,12 +24,17 @@ public class LogicScript : MonoBehaviour
     public void resetGame()
     {
         isGameOver = false;
+        isMessSent=false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void gameOver()
     {
-        mess.SendMessageToFlutter(scoreTxt.text);
+        if (!isMessSent)
+        {
+            mess.SendMessageToFlutter(scoreTxt.text);
+            isMessSent = true;
+        }
         isGameOver = true;
         gameOverScreen.SetActive(true);
     }

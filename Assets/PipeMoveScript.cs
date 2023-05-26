@@ -5,6 +5,7 @@ using UnityEngine;
 public class PipeMoveScript : MonoBehaviour
 {
     public float moveSpeed = 5;
+    //la deadzone è la parte dello schermo non visibile dove vengono distrutti i componenti per fare spazio alla memoria
     public float deadZone = -45;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class PipeMoveScript : MonoBehaviour
         transform.position = transform.position + (Vector3.left  * moveSpeed) * Time.deltaTime;
         if (transform.position.x < deadZone)
         {
-            Debug.Log("pipe deleted, yo");
+            //Debug.Log("pipe deleted, yo");
             Destroy(gameObject);
         }
     }

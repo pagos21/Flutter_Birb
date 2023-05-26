@@ -9,6 +9,8 @@ public class BirbScript : MonoBehaviour
     public float flatStrength;
     public LogicScript logic;
     public bool isBirdOK = true;
+    //forza di torsione quando colpisce un oggetto
+    public float torque = 0;
     // Start is called before the first frame update (start viene eseguito solo una volta)
     void Start()
     {
@@ -35,6 +37,8 @@ public class BirbScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.layer);
+        myRigidbody.AddTorque(torque);
         logic.gameOver();
         isBirdOK = false;
     }
