@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 4.53, y: 21.87543}
   m_EdgeRadius: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a2e5f06fc32bb49ba4459ef85a812c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 40
   deadZone: -45
 --- !u!1 &944356352601952331
 GameObject:

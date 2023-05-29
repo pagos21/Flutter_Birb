@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pipe: {fileID: 662552930307981976, guid: cc500a24021ce8e419a6bc7fe32be876, type: 3}
-  spawnRate: 2
+  spawnRate: 1.2
   hightOffset: 12
 --- !u!1 &1563296707
 GameObject:
@@ -1002,6 +1002,7 @@ MonoBehaviour:
   logic: {fileID: 0}
   isBirdOK: 1
   torque: 150
+  bounceForce: 40
 --- !u!58 &1881811131
 CircleCollider2D:
   m_ObjectHideFlags: 0
