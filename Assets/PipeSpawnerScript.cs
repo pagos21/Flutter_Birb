@@ -8,6 +8,7 @@ public class PipeSpawnerScript : MonoBehaviour {
     private float timer = 0;
     public float hightOffset = 20;
     private float speed = 30;
+    public Rigidbody2D rigidBirb;
     // Start is called before the first frame update
     void Start() {
 
@@ -35,5 +36,10 @@ public class PipeSpawnerScript : MonoBehaviour {
         //In questo modo riesco a creare una nuova instanza di PipeMove con un valore che posso decidere da questo script.
         //Ad esempio riesco ad assegnare la variabile moveSpeed ad un valore incrementale per aumentare la difficoltà ogni 2 secondi
         pipeMoveScript.moveSpeed = speed;
+        Transform topPipe = pipe.transform.GetChild(0);
+        Transform bottomPipe = pipe.transform.GetChild(1);
+        topPipe.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        bottomPipe.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        rigidBirb.mass = 100;
     }
 }

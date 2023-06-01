@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 45950556}
   m_Layer: 3
   m_Name: AllBirb
-  m_TagString: Untagged
+  m_TagString: Birb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,7 +241,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!58 &45950558
 CircleCollider2D:
@@ -475,7 +475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740485774763054641, guid: 3be5703b643631c408e50f650d67a6c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11
+      value: 27.1
       objectReference: {fileID: 0}
     - target: {fileID: 740485774763054641, guid: 3be5703b643631c408e50f650d67a6c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -900,6 +900,7 @@ MonoBehaviour:
   Pipe: {fileID: 662552930307981976, guid: cc500a24021ce8e419a6bc7fe32be876, type: 3}
   spawnRate: 1.2
   hightOffset: 10
+  rigidBirb: {fileID: 45950557}
 --- !u!1 &1402566876
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clouds: {fileID: 740485774763054655, guid: 3be5703b643631c408e50f650d67a6c8, type: 3}
-  spawnRate: 5
+  spawnRate: 4
   hightOffset: 20
 --- !u!4 &1402566878
 Transform:
