@@ -26,20 +26,20 @@ public class PipeSpawnerScript : MonoBehaviour {
     }
 
     void spawnPipe() {
-
         speed += 1;
-        
+        Debug.Log(speed);
         float lowerPoint = transform.position.y - hightOffset;
         float highestPoint = transform.position.y + hightOffset;
         GameObject pipe = Instantiate(Pipe, new Vector3(transform.position.x, Random.Range(lowerPoint, highestPoint), 2), transform.rotation);
         PipeMoveScript pipeMoveScript = pipe.GetComponent<PipeMoveScript>();
         //In questo modo riesco a creare una nuova instanza di PipeMove con un valore che posso decidere da questo script.
-        //Ad esempio riesco ad assegnare la variabile moveSpeed ad un valore incrementale per aumentare la difficoltà ogni 2 secondi
+        //Ad esempio riesco ad assegnare la variabile moveSpeed ad un valore incrementale per aumentare la difficoltï¿½ ogni 2 secondi
         pipeMoveScript.moveSpeed = speed;
-        Transform topPipe = pipe.transform.GetChild(0);
-        Transform bottomPipe = pipe.transform.GetChild(1);
-        topPipe.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-        bottomPipe.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-        rigidBirb.mass = 100;
+        //Questa sezione di merda (che mi ha fatto perdere 2 ore) serve a spostare le colonne al contatto di "birb" se non vuoi rendere le colonne dinamiche non inserirre questo blocco
+        // Transform topPipe = pipe.transform.GetChild(0);
+        // Transform bottomPipe = pipe.transform.GetChild(1);
+        // topPipe.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        // bottomPipe.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        // rigidBirb.mass = 100;
     }
 }

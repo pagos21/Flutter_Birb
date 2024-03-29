@@ -24,18 +24,19 @@ public class LogicScript : MonoBehaviour
     public void resetGame()
     {
         isGameOver = false;
-        isMessSent=false;
+        isMessSent = false;
+        scoreTxt.text = "0";
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void gameOver()
     {
+        isGameOver = true;
+        gameOverScreen.SetActive(true);
         if (!isMessSent)
         {
             mess.SendMessageToFlutter(scoreTxt.text);
             isMessSent = true;
         }
-        isGameOver = true;
-        gameOverScreen.SetActive(true);
     }
 }

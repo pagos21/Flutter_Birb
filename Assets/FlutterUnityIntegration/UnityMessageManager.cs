@@ -59,16 +59,6 @@ namespace FlutterUnityIntegration
         public Action<object> callBack;
     }
 
-    public class MyMessanger : MonoBehaviour
-    {
-        private UnityMessageManager messageManager;
-        private void Start()
-        {
-            messageManager = GetComponent<UnityMessageManager>();
-        }
-    }
-
-
     public class UnityMessageManager : SingletonMonoBehaviour<UnityMessageManager>
     {
 

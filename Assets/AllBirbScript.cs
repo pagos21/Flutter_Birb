@@ -33,8 +33,8 @@ public class AllBirbScript : MonoBehaviour
         }
         if (transform.position.y > 17|| transform.position.y < -15 || transform.position.x < -46)
         {
-            logic.gameOver();
             isBirdOK = false;
+            logic.gameOver();
         }
     }
 
@@ -49,7 +49,7 @@ public class AllBirbScript : MonoBehaviour
         //myRigidbody.AddForce(bounce2 * 2 , ForceMode2D.Impulse);
         Vector2 bounceDirectio = collision.contacts[0].normal;
         myRigidbody.AddForce(bounceDirectio * bounceForce, ForceMode2D.Impulse);
+        isBirdOK = false;
         logic.gameOver();
-        //isBirdOK = false;
     }
 }
